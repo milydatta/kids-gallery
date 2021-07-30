@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCk7GXxOUPHUB-zwM2ZW7Di-b33SwzgwXk",
-    authDomain: "kids-gallery-ece4b.firebaseapp.com",
-    projectId: "kids-gallery-ece4b",
-    storageBucket: "kids-gallery-ece4b.appspot.com",
-    messagingSenderId: "1089773789593",
-    appId: "1:1089773789593:web:6ebc64929ec17b9c707308"
-  };
+  apiKey: "AIzaSyCTfKYz3FfkT-ZM29OxfoQVclKLqIB-W2U",
+  authDomain: "kids-gallery-bfc8b.firebaseapp.com",
+  projectId: "kids-gallery-bfc8b",
+  storageBucket: "kids-gallery-bfc8b.appspot.com",
+  messagingSenderId: "608803091888",
+  appId: "1:608803091888:web:99e66c4f76c739c7721275"
+};
 
   export default firebaseConfig;

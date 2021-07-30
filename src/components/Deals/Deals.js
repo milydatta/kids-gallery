@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Header from '../Header/Header';
 
 const Deals = () => {
-    const [product, setProduct] = useState([]);
+    // const [product, setProduct] = useState([]);
 
-    useEffect(() => {
-        fetch('https://aqueous-depths-66687.herokuapp.com/product')
-        .then(res => res.json())
-        .then(data => setProduct(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://aqueous-depths-66687.herokuapp.com/product')
+    //     .then(res => res.json())
+    //     .then(data => setProduct(data))
+    // }, [])
 
     return (
-        <div className="pt-5">
-            <h1>This is Deals</h1>
+        <div>
+            <Header/>
+            <h1 className="pt-5">This is Deals</h1>
         </div>
     );
 };

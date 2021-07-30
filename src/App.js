@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Orders from './components/Orders/Orders';
 import Admin from './components/Admin/Admin';
 import Deals from './components/Deals/Deals';
+import Checkout from './components/Checkout/Checkout';
 import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
@@ -23,11 +24,12 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
   
     <Router>
-        <Header/>
-        <h3 className="pt-5">email: {loggedInUser.email}</h3>
+        {/* <Header/>
+        <h3 className="mail">email: {loggedInUser.email}</h3> */}
       <Switch>
        <Route path="/home">
-              <Home />
+         
+              <Home/>
             </Route>
         <Route path="/admin">
               <Admin/>
@@ -43,6 +45,9 @@ function App() {
             </Route>
             <PrivateRoute path="/orders">
               <Orders/>
+            </PrivateRoute>
+            <PrivateRoute path="/checkout">
+              <Checkout/>
             </PrivateRoute>
        </Switch>
        </Router>

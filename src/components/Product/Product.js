@@ -8,7 +8,7 @@ const Product = (props) => {
   
     
     const handleBuyNow = () => {
-         history.push('/orders');
+         history.push('/checkout');
     }
     
     return (

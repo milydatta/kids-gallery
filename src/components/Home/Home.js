@@ -1,9 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
+import Header from '../Header/Header';
 import Product from '../Product/Product';
 
 
 
 const Home = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     const products =[
         {   imgUrl:'https://ae01.alicdn.com/kf/HTB1gfRiaU_rK1Rjy0Fcq6zEvVXaa.jpg',
@@ -53,6 +57,8 @@ const Home = () => {
      ]
     return (
         <div>
+            <Header/>
+            <h3 className="mail">Email:{loggedInUser.email}</h3>
             <div className="container">
                 <div className="row">
                     

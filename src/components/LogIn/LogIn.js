@@ -5,6 +5,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
+import Header from '../Header/Header';
 
 const LogIn = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -32,6 +33,8 @@ const LogIn = () => {
          })
         }
     return (
+        <div>
+            <Header/>
         <div className="pl-5">
             <h1 className="mt-5 pt-5">Login</h1>
             <Form style={{height:300,width:500}}>
@@ -48,6 +51,7 @@ const LogIn = () => {
               </Form.Group>
               <Button variant="success" type="submit" onClick={handleGoogleSignIn}>LogIn</Button>
           </Form>
+        </div>
         </div>
     );
 };
