@@ -14,6 +14,8 @@ import Checkout from './components/Checkout/Checkout';
 import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
+import AddProducts from './components/AddProducts/AddProducts';
+import ManageProducts from './components/ManageProducts/ManageProducts';
 
 export const UserContext = createContext();
 
@@ -27,9 +29,8 @@ function App() {
         {/* <Header/>
         <h3 className="mail">email: {loggedInUser.email}</h3> */}
       <Switch>
-       <Route path="/home">
-         
-              <Home/>
+        <Route path="/home">
+             <Home/>
             </Route>
         <Route path="/admin">
               <Admin/>
@@ -49,6 +50,12 @@ function App() {
             <PrivateRoute path="/checkout">
               <Checkout/>
             </PrivateRoute>
+            <Route path="/addProducts">
+              <AddProducts/>
+            </Route>
+            <Route path="/manageProducts">
+              <ManageProducts/>
+            </Route>
        </Switch>
        </Router>
        </UserContext.Provider>
